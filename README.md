@@ -1,6 +1,8 @@
 # E-commerce Home Page
 
-![E-commerce Home Page Screenshot](./public/banner-image.png)
+<div align="center">
+  <img alt="Demo" src="./public/banner-image.png" />
+</div>
 
 This **E-commerce Home Page** is built using **React.js**. It showcases advanced ES6 filtering techniques and utilizes **useContext** for managing global state effectively. The application is styled using CSS to ensure a modern and responsive design.
 
