@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+
+btns {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: 0.6px solid rgb(97, 97, 97);
+  border-radius: 5px;
+  color: #323232;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.hide-scrollbar {
+  overflow-y: scroll; /* Ensures scrolling is enabled */
+  scrollbar-width: none; /* For Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.primary {
+  max-width: 25vw;
+  width: 20vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  align-items: center;
+  height: 100%;
+  border-right: 0.1px solid rgb(213, 208, 208);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.second {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 50px;
+  min-height: 100px;
+}
+
+.list-items {
+  margin-top: 30px;
+
+  width: 95%;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.flex {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.flex input {
+  display: inline;
+  margin: 0%;
+  width: 2rem;
+  height: 1.5rem;
+  margin-right: 20px;
+}
+
+.select-item {
+  min-width: 240px !important;
+}

@@ -1,0 +1,143 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto; /* Allow scrolling if necessary */
+  max-height: 80vh; /* Limits height of scrollable area */
+  scrollbar-width: thin; /* Firefox */
+}
+
+.card-container::-webkit-scrollbar {
+  width: 8px; /* Custom scrollbar for Chrome */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Color of the scrollbar thumb */
+  border-radius: 4px;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 1rem; /* Reduced margin for better spacing */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 250px;
+  width: 200px;
+  gap: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+  overflow: hidden; /* Prevent content overflow */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Scale on hover */
+}
+
+.card img {
+  height: 70px;
+  margin: auto;
+  width: 150px;
+  position: relative;
+}
+
+/* Star styles */
+.card-star span {
+  color: rgb(235, 235, 32);
+}
+
+.card-star {
+  margin-left: 10px;
+  color: black;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Details and title */
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+/* Bottom section */
+.bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Button and icon styles */
+.card-btn,
+.card-icon {
+  border: none !important;
+  outline: none !important;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Favourite icon styles */
+.favourite {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: larger;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+
+.favourite:focus,
+.favourite:hover {
+  color: red;
+}
+
+/* Radio button styles */
+.card-container input[type="radio"] {
+  position: absolute; /* Hide the radio button */
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.card-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-container input[type="radio"]:checked + label {
+  background-color: #e0e0e0; /* Change background on checked */
+  border-color: #aaa; /* Change border color on checked */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* Make cards take up more width on smaller screens */
+    height: auto; /* Allow height to adjust */
+  }
+}
